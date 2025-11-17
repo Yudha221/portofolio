@@ -83,7 +83,7 @@ function App() {
               </div>
               <div>
                 <h1 className="text-4xl mb-1">
-                  4<span className="text-violet-500">+</span>
+                  1<span className="text-violet-500">+</span>
                 </h1>
                 <p>Tahun Pengalaman</p>
               </div>
