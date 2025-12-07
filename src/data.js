@@ -159,7 +159,7 @@ export const listProyek = [
     gambar: Proyek6,
     nama: "Website Portfolio",
     desk: "Website portofolio pribadi untuk menampilkan proyek, skill, dan informasi diri.",
-    tools: ["ReReact JS", "TailwindCSS"],
+    tools: ["React JS", "TailwindCSS"],
     dad: "700",
   },
 ];
