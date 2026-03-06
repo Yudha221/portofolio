@@ -169,3 +169,21 @@ export const listProyek = [
     dad: "700",
   },
 ];
+
+export const listExperience = [
+  {
+    id: 1,
+    posisi: "Assist HPIT in Internal Development",
+    tempat: "PT Kereta Cepat Indonesia China | Internship",
+    tahun: "2025 - Sekarang",
+    desk: "Bertanggung jawab dalam perancangan UI/UX serta turut mengembangkan aplikasi dan website yang digunakan untuk kebutuhan internal perusahaan.",
+  },
+  {
+    id: 2,
+    posisi: "Laboratory Assistant",
+    tempat:
+      "Lembaga Pengembangan Komputerisasi Universitas Gunadarma | Internship",
+    tahun: "2024 - 2025",
+    desk: "Mendampingi kegiatan praktikum serta membimbing mahasiswa selama sesi laboratorium, melakukan pemeliharaan perangkat keras dan sistem untuk mendukung operasional laboratorium, serta berperan sebagai asisten dan host dalam sesi kelas maupun pelatihan teknis.",
+  },
+];

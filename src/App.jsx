@@ -1,5 +1,5 @@
 import DataImage from "./data";
-import { listTools, listProyek } from "./data";
+import { listTools, listProyek, listExperience } from "./data";
 
 function App() {
   return (
@@ -91,6 +91,63 @@ function App() {
           </div>
         </div>
 
+        {/* Experience */}
+        <div className="experience mt-32 py-10" id="experience">
+          <h1
+            className="text-4xl font-bold mb-2 text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Work Experience
+          </h1>
+
+          <p
+            className="text-center opacity-50 mb-14"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            My Journey in the world of software development
+          </p>
+
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
+            {listExperience.map((exp) => (
+              <div
+                key={exp.id}
+                className="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-violet-500 hover:-translate-y-1 transition-all duration-300"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div className="flex items-start gap-4">
+                  {/* Logo */}
+                  {exp.gambar && (
+                    <img
+                      src={exp.gambar}
+                      alt={exp.tempat}
+                      className="w-12 h-12 object-contain bg-zinc-700 p-2 rounded-lg"
+                    />
+                  )}
+
+                  <div className="flex-1">
+                    {/* Posisi */}
+                    <h2 className="text-xl font-semibold">{exp.posisi}</h2>
+
+                    {/* Tempat */}
+                    <p className="text-violet-400 text-sm">{exp.tempat}</p>
+
+                    {/* Tahun */}
+                    <p className="text-xs opacity-50 mb-3">{exp.tahun}</p>
+
+                    {/* Deskripsi */}
+                    <p className="text-sm leading-relaxed opacity-80 text-justify">
+                      {exp.desk}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Experience */}
         <div className="tools mt-32">
           <h1
             className="text-4xl/snug font-bold mb-4 "
