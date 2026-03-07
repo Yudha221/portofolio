@@ -106,7 +106,7 @@ function App() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            My Journey in the world of software development
+            My Path as a Developer
           </p>
 
           <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
