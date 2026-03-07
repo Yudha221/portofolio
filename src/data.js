@@ -170,9 +170,13 @@ export const listProyek = [
   },
 ];
 
+import Exp1 from "/assets/experience/kcic.png";
+import Exp2 from "/assets/experience/lepkom.png";
+
 export const listExperience = [
   {
     id: 1,
+    gambar: Exp1,
     posisi: "Assist HPIT in Internal Development",
     tempat: "PT Kereta Cepat Indonesia China | Internship",
     tahun: "2025 - Sekarang",
@@ -180,6 +184,7 @@ export const listExperience = [
   },
   {
     id: 2,
+    gambar: Exp2,
     posisi: "Laboratory Assistant",
     tempat:
       "Lembaga Pengembangan Komputerisasi Universitas Gunadarma | Internship",

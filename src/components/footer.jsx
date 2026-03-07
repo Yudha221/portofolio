@@ -12,11 +12,11 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="#">
+        <a href="https://github.com/Yudha221">
           <i className="ri-github-fill ri-2x"></i>
         </a>
-        <a href="#">
-          <i className="ri-instagram-fill ri-2x"></i>
+        <a href="https://www.linkedin.com/in/yudha-ghilang-rohmansyah/">
+          <i className="ri-linkedin-box-fill ri-2x"></i>
         </a>
       </div>
     </div>

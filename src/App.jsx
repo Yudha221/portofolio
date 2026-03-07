@@ -113,7 +113,7 @@ function App() {
             {listExperience.map((exp) => (
               <div
                 key={exp.id}
-                className="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-violet-500 hover:-translate-y-1 transition-all duration-300"
+                className="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-violet-500 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -123,7 +123,7 @@ function App() {
                     <img
                       src={exp.gambar}
                       alt={exp.tempat}
-                      className="w-12 h-12 object-contain bg-zinc-700 p-2 rounded-lg"
+                      className="w-16 h-16 object-contain bg-zinc-700 p-3 rounded-xl"
                     />
                   )}
 
@@ -222,7 +222,12 @@ function App() {
               data-aos-delay={proyek.dad}
               data-aos-once="true"
             >
-              <img src={proyek.gambar} alt="Proyek Image" loading="lazy" />
+              <img
+                src={proyek.gambar}
+                alt="Proyek Image"
+                loading="lazy"
+                className="hover:scale-110 transition duration-500"
+              />
               <div>
                 <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
                 <p className="text-base/loose mb-4">{proyek.desk}</p>
