@@ -1,9 +1,11 @@
 import DataImage from "./data";
-import { listTools, listProyek, listExperience } from "./data";
+import { listTools, listExperience } from "./data";
+import Project from "./components/Project";
 
 function App() {
   return (
     <>
+      {/* HERO */}
       <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-3s">
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
@@ -15,14 +17,17 @@ function App() {
             />
             <q>kode yang indah lahir dari ketekunan.😊</q>
           </div>
+
           <h1 className="text-5xl/tight font-bold mb-6">
             Hi, Saya Yudha Ghilang
           </h1>
+
           <p className="text-base/loose mb-6 opacity-50">
             Saya mempunyai ketertarikan dalam bidang Programing, terutama pada
             pembuatan Website dan Mobile app, ketertarikan ini sudah berlangsung
             lebih dari 4 Tahun untuk semua bidang.
           </p>
+
           <div className="flex items-center sm:gap-4 gap-2">
             <a
               href="/CV_Yudha Ghilang Rohmansyah_2025 update.pdf"
@@ -30,6 +35,7 @@ function App() {
             >
               Download CV <i className="ri-download-line ri-lg"></i>
             </a>
+
             <a
               href="#proyek"
               className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600"
@@ -38,6 +44,7 @@ function App() {
             </a>
           </div>
         </div>
+
         <img
           src={DataImage.HeroImage}
           alt="Hero Image"
@@ -91,7 +98,7 @@ function App() {
           </div>
         </div>
 
-        {/* Experience */}
+        {/* EXPERIENCE */}
         <div className="experience mt-32 py-10" id="experience">
           <h1
             className="text-4xl font-bold mb-2 text-center"
@@ -120,13 +127,16 @@ function App() {
                 <div className="flex items-start gap-4">
                   {/* Logo */}
                   {exp.gambar && (
-                    <img
-                      src={exp.gambar}
-                      alt={exp.tempat}
-                      className="w-16 h-16 object-contain bg-zinc-700 p-3 rounded-xl"
-                    />
+                    <div className="bg-zinc-700 p-3 rounded-xl transition">
+                      <img
+                        src={exp.gambar}
+                        alt={exp.tempat}
+                        className="w-10 h-10 object-contain"
+                      />
+                    </div>
                   )}
 
+                  {/* Content */}
                   <div className="flex-1">
                     {/* Posisi */}
                     <h2 className="text-xl font-semibold">{exp.posisi}</h2>
@@ -147,7 +157,8 @@ function App() {
             ))}
           </div>
         </div>
-        {/* Experience */}
+
+        {/* TOOLS */}
         <div className="tools mt-32">
           <h1
             className="text-4xl/snug font-bold mb-4 "
@@ -191,70 +202,10 @@ function App() {
           </div>
         </div>
       </div>
-      {/* Tentang */}
 
-      {/* Proyek */}
-      <div className="proyek mt-22 py-10" id="proyek">
-        <h1
-          className="text-center text-4xl font-bold mb-2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          Proyek
-        </h1>
-        <p
-          className="text-base/loose text-center opacity-50"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          data-aos-once="true"
-        >
-          Berikut ini beberapa proyek yang sudah saya buat.
-        </p>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map((proyek) => (
-            <div
-              key={proyek.id}
-              className="p-4 bg-zinc-800 rounded-md"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay={proyek.dad}
-              data-aos-once="true"
-            >
-              <img
-                src={proyek.gambar}
-                alt="Proyek Image"
-                loading="lazy"
-                className="hover:scale-110 transition duration-500"
-              />
-              <div>
-                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-                <p className="text-base/loose mb-4">{proyek.desk}</p>
-                <div className="flex flex-wrap gap-2">
-                  {proyek.tools.map((tool, index) => (
-                    <p
-                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
-                      key={index}
-                    >
-                      {tool}
-                    </p>
-                  ))}
-                </div>
-                <div className="mt-8 text-center">
-                  <a
-                    href="#"
-                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600"
-                  >
-                    Lihat Project
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Proyek */}
+      {/* PROJECT COMPONENT */}
+      <Project />
+
       {/* kontak */}
       <div className="kontak mt-22 sm:p-10 p-0" id="kontak">
         <h1

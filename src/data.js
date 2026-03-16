@@ -192,3 +192,12 @@ export const listExperience = [
     desk: "Mendampingi kegiatan praktikum serta membimbing mahasiswa selama sesi laboratorium, melakukan pemeliharaan perangkat keras dan sistem untuk mendukung operasional laboratorium, serta berperan sebagai asisten dan host dalam sesi kelas maupun pelatihan teknis.",
   },
 ];
+
+export const listVideo = [
+  {
+    id: 1,
+    title: "WHOOSHER PASS",
+    video: "/video/WHOOSHER PASS.mp4",
+    thumbnail: "/assets/video-thumbnail/whoosher.webp",
+  },
+];
