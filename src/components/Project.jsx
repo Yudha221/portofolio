@@ -52,10 +52,14 @@ export default Project;
 const ProjectList = () => {
   return (
     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-      {listProyek.map((proyek) => (
+      {listProyek.map((proyek, index) => (
         <div
           key={proyek.id}
           className="p-4 bg-zinc-800 rounded-lg hover:-translate-y-2 transition duration-300"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay={index * 100}
+          data-aos-once="true"
         >
           <img
             src={proyek.gambar}
