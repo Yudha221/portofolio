@@ -16,7 +16,7 @@ const Project = () => {
       <div className="flex justify-center gap-4 mb-10">
         <button
           onClick={() => setTab("project")}
-          className={`px-6 py-2 rounded-lg hidden ${
+          className={`px-6 py-2 rounded-lg ${
             tab === "project"
               ? "bg-violet-700 text-white"
               : "bg-zinc-700 text-white"
@@ -27,7 +27,7 @@ const Project = () => {
 
         <button
           onClick={() => setTab("video")}
-          className={`px-6 py-2 rounded-lg hidden ${
+          className={`px-6 py-2 rounded-lg ${
             tab === "video"
               ? "bg-violet-700 text-white"
               : "bg-zinc-700 text-white"
@@ -38,7 +38,7 @@ const Project = () => {
       </div>
 
       {/* CONTENT */}
-      <ProjectList />
+      {tab === "project" ? <ProjectList /> : <VideoList />}
     </div>
   );
 };
