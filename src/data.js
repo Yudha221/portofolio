@@ -179,7 +179,7 @@ export const listExperience = [
     gambar: Exp1,
     posisi: "Assist HPIT in Internal Development",
     tempat: "PT Kereta Cepat Indonesia China | Internship",
-    tahun: "2025 - Sekarang",
+    tahun: "2025 - 2026",
     desk: "Bertanggung jawab dalam perancangan UI/UX serta turut mengembangkan aplikasi dan website yang digunakan untuk kebutuhan internal perusahaan.",
   },
   {
